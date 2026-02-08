@@ -26,3 +26,7 @@ using Colors
 using Distances
 using NNlib
 using ProgressMeter
+using Random
+
+# reproducibility
+Random.seed!(123);

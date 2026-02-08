@@ -271,3 +271,6 @@ Provide a rating on a scale of **0-10** based on:
 - Users may leave specific guidance about what should go in learning objectives or summary sections
 - Follow these instructions precisely - they override general formatting guidelines
 - Ask for clarification if instructions are ambiguous
+
+### Prohibited Models
+- **Do NOT use the Claude Haiku model for any task in this repository.** Haiku consistently produces poor-quality edits, misses compliance violations, and generates low-quality narrative text. This prohibition is permanent and applies to all notebook creation, review, and editing tasks. Use Claude Sonnet or Claude Opus only.
