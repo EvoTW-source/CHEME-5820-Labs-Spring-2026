@@ -1,5 +1,6 @@
 # setup paths -
 const _ROOT = pwd();
+const _PATH_TO_SRC = joinpath(_ROOT, "src");
 
 # check do we have a Manifest.toml file?
 using Pkg;
@@ -18,3 +19,5 @@ using LinearAlgebra
 using Distances
 using PrettyTables
 using Random
+using KernelFunctions
+using DataFrames
