@@ -89,6 +89,19 @@ Check all mathematical notation for consistency and precision:
 - Blockquotes should be self-contained explanatory sections, not fragmented pieces
 - When presenting multi-step processes, consider using a single blockquote with internal structure rather than multiple separate blockquotes
 
+**Blockquote Structure (Title + Content Pattern):**
+- All blockquotes must follow a consistent two-line format: title line + empty line + content
+- **Title line format**: `> __[Title]:__` or `> __[Title Description]__` - use bold underscores for the title
+- **Content line**: `>` followed by the explanatory content (can span multiple lines)
+- **Example**:
+  ```
+  > __What is going on in this code block?__
+  >
+  > We randomly shuffle the data using a fixed seed for reproducibility, split 80% for training...
+  ```
+- This structure improves visual scannability and creates consistent formatting across all notebooks
+- Short informational blockquotes with only a title (no separate content) are acceptable for minimal explanations
+
 **LaTeX Rendering Verification:**
 - All LaTeX equations must be syntactically correct and render properly
 - Ensure all `$$..$$` or `$...$` delimiters are properly matched
@@ -274,3 +287,9 @@ Provide a rating on a scale of **0-10** based on:
 
 ### Prohibited Models
 - **Do NOT use the Claude Haiku model for any task in this repository.** Haiku consistently produces poor-quality edits, misses compliance violations, and generates low-quality narrative text. This prohibition is permanent and applies to all notebook creation, review, and editing tasks. Use Claude Sonnet or Claude Opus only.
+
+### CRITICAL: Never Use Haiku for Compliance Checking
+- **Haiku MUST NOT be used for notebook compliance verification.** Haiku has repeatedly failed to identify CLAUDE.md violations including missing blockquote-to-code transition sentences, incorrect Key Takeaway formatting, and structural pattern violations.
+- **All compliance checking, verification, and fixing must be performed exclusively by Claude Sonnet or Claude Opus.**
+- **After any compliance fixes, always do a complete line-by-line re-verification using Sonnet or Opus before declaring compliance.**
+- Haiku's compliance checking is unreliable and will introduce errors that require extensive rework. This is a non-negotiable rule.
